@@ -1,11 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let script1 = document.querySelector('#handlebars1').innerHTML;
-
-  let obj = {
-    "name": "<h2>Henry</h2>",
-    "date": "<i>2020-12-10</i>",
-  };
-
-  let templateScript = Handlebars.compile(script1); // returns a function
-  document.body.innerHTML = templateScript(obj);
-});
+window.onload = function() {
+    //Grab the inline template
+    var template = document.getElementById('template').innerHTML;
+  
+    //Compile the template
+    var compiled_template = Handlebars.compile(template);
+  
+    //Render the data into the template
+    var rendered = compiled_template({name: "Luke", power: "handlebar.js force"});
+  
+    //Overwrite the contents of #target with the renderer HTML
+    document.getElementById('target').innerHTML = rendered;
+  }
