@@ -6,7 +6,7 @@ window.onload = function() {
     var compiled_template = Handlebars.compile(template);
   
     //Render the data into the template
-    var rendered = compiled_template({name: "Luke", power: "handlebar.js force"});
+    var rendered = compiled_template({name: "Jorge", power: "handlebars force"});
   
     //Overwrite the contents of #target with the renderer HTML
     document.getElementById('target').innerHTML = rendered;
