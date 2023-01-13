@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <h1></h1>
-
-
-    
-
-  <!-- Include Handlebars from a CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-  <script>
-    // compile the template
-    var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-    // execute the compiled template and print the output to the console
-    console.log(template({ doesWhat: "rocks!" }));
-  </script>
-</body>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src='handlebarsApp.js'></script>
+  </head>
+  <body>
+    <h1>Hello, World</h1>
+    <script id='handlebars1' type='text/x-handlebars'>
+      <div>
+        {{{name}}}
+        <br>
+        {{date}}
+      </div>
+    </script>
+    <script src="script.js"></script>
+  </body>
 </html>
